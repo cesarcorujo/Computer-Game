@@ -8,8 +8,8 @@ function playerSelection (){
    let message = document.querySelector("#message");
    let mensaje = "Your selection is " + player ;
   
-
-if (player == "paper" || player == "Paper" || player == "PAPER" 
+   
+if (player == "paper" || player == "Paper" || player == "PAPER"
 || player == "rock" || player == "Rock" || player == "ROCK"|| 
 player == "Sissors" || player == "SISSORS" || player == "sissors"){
 
@@ -58,23 +58,30 @@ function game(eventgame) {
       alert("Empate");
    }
 
-   else if ((computerPlay() === "Paper" && player === "rock" )) {
+   else if ((computerPlay() === "Rock" && player === "paper") || 
+   (computerPlay() === "Paper" && player === "rock" ))
+  
+   {
 
       alert("Paper beats rock !");
    }
-else if ((computerPlay() === "Sissors" && player === "rock" )){
+
+else if ((computerPlay() === "Sissors" && player === "rock" ) ||
+(computerPlay() === "Rock" && player === "sissors" ))
+
+{
 
    alert("Rock beat Sissors !");
 }
 
-else if((computerPlay() === "Rock" && player === "paper" )) {
+else if((computerPlay() === "Paper" && player === "sissors" ) || 
+(computerPlay() === "Sissors" && player === "paper" ))
+{
 
-   alert("Paper beats Rock !");
+   alert("Sissors beats Paper !");
 }
 
-   else {
-      alert("Play again");
-   }
+ 
 }
 
 let miform = document.querySelector("#form");
