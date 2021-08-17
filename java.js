@@ -51,38 +51,78 @@ function game(eventgame) {
    
 
      
-   if ((computerPlay() === "Paper" && player === "paper" ) || 
-   (computerPlay() === "Sissors" && player === "sissors") || 
-   (computerPlay() === "Rock" && player === "rock" )) {
+   if ((computerPlay() === "Paper" && player === "paper") ||  
+   (computerPlay() === "Paper" && player === "Paper") ||  
+   (computerPlay() === "Paper" && player === "PAPER") || 
 
-      alert("Empate");
+   (computerPlay() === "Sissors" && player === "sissors") || 
+   (computerPlay() === "Sissors" && player === "Sissors") || 
+   (computerPlay() === "Sissors" && player === "SISSORS") || 
+
+
+   (computerPlay() === "Rock" && player === "rock") || 
+   (computerPlay() === "Rock" && player === "Rock") || 
+   (computerPlay() === "Rock" && player === "ROCK"))
+
+   {
+
+      document.getElementById("alert1").innerHTML = "Draw !";
    }
 
-   else if ((computerPlay() === "Rock" && player === "paper") || 
-   (computerPlay() === "Paper" && player === "rock" ))
+
+   else if ((computerPlay() === "Rock" && player === "paper") ||
+   (computerPlay() === "Rock" && player === "Paper") ||
+   (computerPlay() === "Rock" && player === "PAPER") ||
+
+   (computerPlay() === "Paper" && player === "rock") ||
+   (computerPlay() === "Paper" && player === "Rock") ||
+   (computerPlay() === "Paper" && player === "ROCK"))
   
    {
 
-      alert("Paper beats rock !");
+      document.getElementById("alert2").innerHTML = "Paper beats rock !";
    }
 
-else if ((computerPlay() === "Sissors" && player === "rock" ) ||
-(computerPlay() === "Rock" && player === "sissors" ))
+else if ((computerPlay() === "Sissors" && player === "rock") ||
+(computerPlay() === "Sissors" && player === "Rock") || 
+(computerPlay() === "Sissors" && player === "ROCK") || 
+(computerPlay() === "Rock" && player === "sissors") || 
+(computerPlay() === "Rock" && player === "Sissors") || 
+(computerPlay() === "Rock" && player === "SISSORS"))
 
 {
 
-   alert("Rock beat Sissors !");
+   document.getElementById("alert3").innerHTML = "Rock beat Sissors !";
 }
 
 else if((computerPlay() === "Paper" && player === "sissors" ) || 
-(computerPlay() === "Sissors" && player === "paper" ))
+(computerPlay() === "Paper" && player === "Sissors" ) ||
+(computerPlay() === "Paper" && player === "SISSORS" ) ||
+
+(computerPlay() === "Sissors" && player === "paper" ) ||
+(computerPlay() === "Sissors" && player === "Paper" ) ||
+(computerPlay() === "Sissors" && player === "PAPER" ))
+
 {
 
-   alert("Sissors beats Paper !");
+   document.getElementById("alert4").innerHTML = "Sissors beats Paper !";
 }
 
  
 }
 
+
+
+
+
 let miform = document.querySelector("#form");
 miform.addEventListener("submit",game);
+
+const reloadtButton = document.querySelector("#reload");
+// Reload everything:
+function reload() {
+
+    reload = location.reload();
+}
+// Event listeners for reload
+reloadButton.addEventListener("click", reload, false);

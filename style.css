@@ -1,12 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap");
+
+body {
+  position: relative;
+  text-align: center;
+  font-family: Dosis, sans-serif;
+  font-size: large;
+}
+
+h1 {
+  font-family: dosis, sans-serif;
+}
+#title {
+  padding-top: 5%;
+}
 #form {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
-    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: sans-serif;
 }
 
 #demo {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: blueviolet;
 }
 
 #message {
   font-family: "Courier New", Courier, monospace;
+  color: blue;
+}
+
+#alert1,
+#alert2,
+#alert3,
+#alert4 {
+  font-family: Dosis;
+  color: rgb(89, 95, 82);
 }
