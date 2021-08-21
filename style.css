@@ -34,3 +34,11 @@ h1 {
   font-family: Dosis;
   color: rgb(89, 95, 82);
 }
+
+#gamerTotal {
+  font-family: "Courier New", Courier, monospace;
+}
+
+#computerTotal {
+  font-family: "Courier New", Courier, monospace;
+}
