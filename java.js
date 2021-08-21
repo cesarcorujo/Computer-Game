@@ -9,9 +9,9 @@ function playerSelection (){
    let mensaje = "Your selection is " + player ;
   
    
-if (player == "paper" || player == "Paper" || player == "PAPER"
-|| player == "rock" || player == "Rock" || player == "ROCK"|| 
-player == "Sissors" || player == "SISSORS" || player == "sissors"){
+if (player === "paper" || player === "Paper" || player === "PAPER"
+|| player === "rock" || player === "Rock" || player === "ROCK"|| 
+player === "Sissors" || player === "SISSORS" || player === "sissors"){
 
    message.textContent = mensaje;
 }
@@ -48,81 +48,71 @@ function game(eventgame) {
 
    let player = document.querySelector("#selection").value;
 
-   
 
-     
-   if ((computerPlay() === "Paper" && player === "paper") ||  
-   (computerPlay() === "Paper" && player === "Paper") ||  
+    
+   if ((computerPlay() === "Paper" && player === "paper") || 
+   (computerPlay() === "Paper" && player === "Paper") || 
    (computerPlay() === "Paper" && player === "PAPER") || 
-
    (computerPlay() === "Sissors" && player === "sissors") || 
    (computerPlay() === "Sissors" && player === "Sissors") || 
    (computerPlay() === "Sissors" && player === "SISSORS") || 
-
-
-   (computerPlay() === "Rock" && player === "rock") || 
+   (computerPlay() === "Rock" && player === "Rock") || 
    (computerPlay() === "Rock" && player === "Rock") || 
    (computerPlay() === "Rock" && player === "ROCK"))
-
-   {
+ {
 
       document.getElementById("alert1").innerHTML = "Draw !";
-   }
 
 
-   else if ((computerPlay() === "Rock" && player === "paper") ||
-   (computerPlay() === "Rock" && player === "Paper") ||
-   (computerPlay() === "Rock" && player === "PAPER") ||
-
-   (computerPlay() === "Paper" && player === "rock") ||
-   (computerPlay() === "Paper" && player === "Rock") ||
-   (computerPlay() === "Paper" && player === "ROCK"))
-  
-   {
-
-      document.getElementById("alert2").innerHTML = "Paper beats rock !";
-   }
-
-else if ((computerPlay() === "Sissors" && player === "rock") ||
-(computerPlay() === "Sissors" && player === "Rock") || 
-(computerPlay() === "Sissors" && player === "ROCK") || 
-(computerPlay() === "Rock" && player === "sissors") || 
-(computerPlay() === "Rock" && player === "Sissors") || 
-(computerPlay() === "Rock" && player === "SISSORS"))
+} else if ((computerPlay() === "Rock" && player === "paper") || 
+(computerPlay() === "Rock" && player === "Paper") || 
+(computerPlay() === "Rock" && player === "PAPER") || 
+(computerPlay() === "Paper" && player === "rock") || 
+(computerPlay() === "Paper" && player === "Rock") || 
+(computerPlay() === "Paper"&& player === "ROCK"))
 
 {
 
+   document.getElementById("alert2").innerHTML = "Paper beats rock !";
+
+} else if ((computerPlay() === "Sissors" && player === "rock") || 
+(computerPlay() === "Sissors" && player === "Rock") || 
+(computerPlay() === "Sissors" && player === "ROCK") || 
+(computerPlay() === "Rock" && player === "sissors") || 
+(computerPlay() === "Rock" && player === "Sissors") ||
+(computerPlay() === "Rock" && player === "SISSORS")) {
+
    document.getElementById("alert3").innerHTML = "Rock beat Sissors !";
-}
 
-else if((computerPlay() === "Paper" && player === "sissors" ) || 
-(computerPlay() === "Paper" && player === "Sissors" ) ||
-(computerPlay() === "Paper" && player === "SISSORS" ) ||
+}  
 
-(computerPlay() === "Sissors" && player === "paper" ) ||
-(computerPlay() === "Sissors" && player === "Paper" ) ||
-(computerPlay() === "Sissors" && player === "PAPER" ))
+ else if ((computerPlay() === "Paper" && player === "sissors") || 
+(computerPlay() === "Paper" && player === "Sissors") || 
+(computerPlay() === "Paper" && player === "SISSORS") || 
+(computerPlay() === "Sissors" && player === "paper") || 
+(computerPlay() === "Sissors" && player === "Paper") || 
+(computerPlay() === "Sissors" && player === "PAPER"))
 
 {
 
    document.getElementById("alert4").innerHTML = "Sissors beats Paper !";
-}
 
  
 }
-
-
-
-
+      
+}
+ 
+     
+document.getElementById("form").reset()
 
 let miform = document.querySelector("#form");
 miform.addEventListener("submit",game);
 
 const reloadtButton = document.querySelector("#reload");
-// Reload everything:
+ //Reload everything:
 function reload() {
 
     reload = location.reload();
 }
-// Event listeners for reload
+ //Event listeners for reload
 reloadButton.addEventListener("click", reload, false);
