@@ -48,26 +48,28 @@ function game(eventgame) {
 
    let player = document.querySelector("#selection").value.toLowerCase();
 
+   var computer = computerPlay();
 
+      
     
-   if ((computerPlay() === "Paper" && player === "paper") || 
-   (computerPlay() === "Sissors" && player === "sissors") || 
-   (computerPlay() === "Rock" && player === "rock"))  
+   if ((computer === "Paper" && player === "paper") || 
+   (computer === "Sissors" && player === "sissors") || 
+   (computer === "Rock" && player === "rock"))  
    
     {
 
       document.getElementById("alert1").innerHTML = "Draw !";
 
 
-} else if ((computerPlay() === "Rock" && player === "paper") || 
-(computerPlay() === "Paper" && player === "rock"))
+} else if ((computer === "Rock" && player === "paper") || 
+(computer === "Paper" && player === "rock"))
 
 {
 
    document.getElementById("alert2").innerHTML = "Paper beats rock !";
 
-} else if ((computerPlay() === "Sissors" && player === "rock")
- || (computerPlay() === "Rock" && player === "sissors")) 
+} else if ((computer === "Sissors" && player === "rock")
+ || (computer === "Rock" && player === "sissors")) 
 
 {
 
@@ -75,9 +77,9 @@ function game(eventgame) {
 
 }  
 
- else if ((computerPlay() === "Paper" && player === "sissors") || 
+ else if ((computer === "Paper" && player === "sissors") || 
 
-(computerPlay() === "Sissors" && player === "paper"))
+(computer === "Sissors" && player === "paper"))
 
 
 {
