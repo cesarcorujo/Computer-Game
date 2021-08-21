@@ -46,52 +46,39 @@ function game(eventgame) {
    computerPlay();
    playerSelection();
 
-   let player = document.querySelector("#selection").value;
+   let player = document.querySelector("#selection").value.toLowerCase();
 
 
     
    if ((computerPlay() === "Paper" && player === "paper") || 
-   (computerPlay() === "Paper" && player === "Paper") || 
-   (computerPlay() === "Paper" && player === "PAPER") || 
    (computerPlay() === "Sissors" && player === "sissors") || 
-   (computerPlay() === "Sissors" && player === "Sissors") || 
-   (computerPlay() === "Sissors" && player === "SISSORS") || 
-   (computerPlay() === "Rock" && player === "Rock") || 
-   (computerPlay() === "Rock" && player === "Rock") || 
-   (computerPlay() === "Rock" && player === "ROCK"))
- {
+   (computerPlay() === "Rock" && player === "rock"))  
+   
+    {
 
       document.getElementById("alert1").innerHTML = "Draw !";
 
 
 } else if ((computerPlay() === "Rock" && player === "paper") || 
-(computerPlay() === "Rock" && player === "Paper") || 
-(computerPlay() === "Rock" && player === "PAPER") || 
-(computerPlay() === "Paper" && player === "rock") || 
-(computerPlay() === "Paper" && player === "Rock") || 
-(computerPlay() === "Paper"&& player === "ROCK"))
+(computerPlay() === "Paper" && player === "rock"))
 
 {
 
    document.getElementById("alert2").innerHTML = "Paper beats rock !";
 
-} else if ((computerPlay() === "Sissors" && player === "rock") || 
-(computerPlay() === "Sissors" && player === "Rock") || 
-(computerPlay() === "Sissors" && player === "ROCK") || 
-(computerPlay() === "Rock" && player === "sissors") || 
-(computerPlay() === "Rock" && player === "Sissors") ||
-(computerPlay() === "Rock" && player === "SISSORS")) {
+} else if ((computerPlay() === "Sissors" && player === "rock")
+ || (computerPlay() === "Rock" && player === "sissors")) 
+
+{
 
    document.getElementById("alert3").innerHTML = "Rock beat Sissors !";
 
 }  
 
  else if ((computerPlay() === "Paper" && player === "sissors") || 
-(computerPlay() === "Paper" && player === "Sissors") || 
-(computerPlay() === "Paper" && player === "SISSORS") || 
-(computerPlay() === "Sissors" && player === "paper") || 
-(computerPlay() === "Sissors" && player === "Paper") || 
-(computerPlay() === "Sissors" && player === "PAPER"))
+
+(computerPlay() === "Sissors" && player === "paper"))
+
 
 {
 
