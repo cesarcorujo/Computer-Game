@@ -13,10 +13,11 @@ h1 {
   font-family: dosis;
 }
 #title {
-  padding-top: 5%;
+  padding-top: -5%;
 }
 #form {
   font-family: dosis;
+  padding-top: 2%;
 }
 
 .grid-containerMessages {
@@ -26,12 +27,12 @@ h1 {
 }
 #demo {
   font-family: dosis;
-  color: blueviolet;
+  color: rgb(247, 250, 244);
 }
 
 #message {
   font-family: dosis;
-  color: blue;
+  color: rgb(247, 250, 244);
 }
 
 #alert1,
@@ -59,7 +60,7 @@ h1 {
 
 .button {
   position: fixed;
-  bottom: 80px;
+  bottom: 60px;
   left: 47vw;
   width: 6vw;
 }
