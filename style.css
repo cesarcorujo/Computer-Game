@@ -1,29 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap");
 
 body {
+  background-image: url(../img/dark_wall.png);
   position: relative;
   text-align: center;
   font-family: Dosis, sans-serif;
   font-size: large;
+  color: rgb(247, 250, 244);
 }
 
 h1 {
-  font-family: dosis, sans-serif;
+  font-family: dosis;
 }
 #title {
   padding-top: 5%;
 }
 #form {
-  font-family: sans-serif;
+  font-family: dosis;
 }
 
+.grid-containerMessages {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+}
 #demo {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: dosis;
   color: blueviolet;
 }
 
 #message {
-  font-family: "Courier New", Courier, monospace;
+  font-family: dosis;
   color: blue;
 }
 
@@ -32,13 +39,27 @@ h1 {
 #alert3,
 #alert4 {
   font-family: Dosis;
-  color: rgb(89, 95, 82);
+  font-size: xx-large;
+  color: rgb(247, 250, 244);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
 }
 
 #gamerTotal {
-  font-family: "Courier New", Courier, monospace;
+  font-family: dosis;
 }
 
 #computerTotal {
-  font-family: "Courier New", Courier, monospace;
+  font-family: dosis;
+}
+
+.button {
+  position: fixed;
+  bottom: 80px;
+  left: 47vw;
+  width: 6vw;
 }
