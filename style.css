@@ -9,6 +9,16 @@ body {
   background-color: rgb(63, 56, 56);
 }
 
+.flex {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  padding-top: 20px;
+}
+
 h1 {
   font-family: dosis;
 }
@@ -63,4 +73,8 @@ h1 {
   bottom: 60px;
   left: 47vw;
   width: 6vw;
+}
+
+#result {
+  font-family: dosis;
 }

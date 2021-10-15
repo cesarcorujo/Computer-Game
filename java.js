@@ -4,6 +4,10 @@ function playerSelection() {
    let player = document.querySelector("#selection").value.toLowerCase();
 }
 
+let userScore = 0;
+let computerScore = 0;
+
+
 // Function for cumputer random play //
 
 
@@ -61,6 +65,7 @@ function game(eventgame) {
       document.getElementById("computerTotal").innerHTML = " Computer  =  0" ;
       message.textContent = mensaje;
 
+
 } else if (computer === "Rock" && player === "paper") 
 
 {
@@ -99,7 +104,7 @@ function game(eventgame) {
    message.textContent = mensaje;
    document.getElementById("alert3").innerHTML = "Rock beat Sissors !";
    document.getElementById("gamerTotal").innerHTML = " Gamer =  0" ;
-   document.getElementById("computerTotal").innerHTML = " Computer  =  0" ;
+   document.getElementById("computerTotal").innerHTML = " Computer  =  1" ;
    computerScore++;
 }
 
@@ -136,7 +141,7 @@ function game(eventgame) {
    
 
 
- //Event ro reload//
+ //Event to reload//
      
 document.getElementById("form").reset()
 
