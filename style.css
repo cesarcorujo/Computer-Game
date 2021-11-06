@@ -91,7 +91,7 @@ main {
   position: relative;
 }
 
-.mesa {
+.table {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -103,7 +103,7 @@ main {
   position: absolute;
 }
 
-.mesa1 {
+.table1 {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -115,21 +115,21 @@ main {
   position: absolute;
 }
 
-.mesa2 {
+.table2 {
   margin: auto;
   margin-left: 23%;
   margin-top: 0, 5%;
   position: absolute;
 }
 
-.mesa3 {
+.table3 {
   margin: auto;
   margin-left: 63%;
   margin-top: 0, 5%;
   position: absolute;
 }
 
-.tarjeta {
+.card {
   width: 6rem;
   height: 6rem;
   margin: 0.5rem;
@@ -144,7 +144,7 @@ main {
   transition: all 0.3s ease;
 }
 
-.tarjeta1 {
+.card1 {
   width: 6rem;
   height: 6rem;
   margin: 0.5rem;
@@ -162,7 +162,7 @@ main {
   transition: all 0.3s ease;
 }
 
-.tarjeta__contenido {
+.card__content {
   position: absolute;
   left: 0;
   right: 0;
@@ -180,7 +180,7 @@ main {
   padding-top: 0.4rem;
 }
 
-.tarjeta__contenido1 {
+.card1__content {
   position: absolute;
   left: 0;
   right: 0;
@@ -204,10 +204,10 @@ main {
   box-shadow: 0 0 1rem #1c3ae4;
 }
 
-.tarjeta__contenido::selection {
+.card__content::selection {
   background: transparent;
 }
 
-.tarjeta.descubierta {
+.card.uncovered {
   transform: rotateY(-180deg);
 }

@@ -1,61 +1,61 @@
 
-var grupoTarjetas = ["✂️", "📃", "🪨"];
+var cardGroup = ["✂️", "📃", "🪨"];
 
 
 
-function barajaTarjetas() {
-  var resultado;
-  resultado = grupoTarjetas.sort(function () {
+function sortCards() {
+  var result;
+  result = cardGroup.sort(function () {
     return 0.5 - Math.random();
   });
-  return resultado;
+  return result;
 }
 
 
 
-function reparteTarjetas() {
+function distributeCards() {
 
 
-  var mesa = document.querySelector("#mesa");
-  var mesa1 = document.querySelector("#mesa1");
-  var mesa2 = document.querySelector("#mesa2");
-  var mesa3 = document.querySelector("#mesa3");
+  var table = document.querySelector("#table");
+  var table1 = document.querySelector("#table1");
+  var table2 = document.querySelector("#table2");
+  var table3 = document.querySelector("#table3");
 
 
-  var tarjetasBarajadas = barajaTarjetas();
+  var sortedCards = sortCards();
 
-  mesa2.innerHTML = '<span>Human Play</span>';
-  mesa3.innerHTML = '<span>Computer Play</span>';
+  table2.innerHTML = '<span>Human Play</span>';
+  table3.innerHTML = '<span>Computer Play</span>';
 
-  mesa.innerHTML = "";
-  mesa1.innerHTML = "";
-
-
-
-  tarjetasBarajadas.forEach(function (elemento) {
+  table.innerHTML = "";
+  table1.innerHTML = "";
 
 
-    var tarjeta = document.createElement("div");
-    var tarjeta1 = document.createElement("div");
+
+ sortedCards.forEach(function (elemento) {
 
 
-    tarjeta.innerHTML =
-      "<div  class='tarjeta1'>" +
-      "<div class='tarjeta__contenido1'>" +
+    var card = document.createElement("div");
+    var card1 = document.createElement("div");
+
+
+    card.innerHTML =
+      "<div  class='card'>" +
+      "<div class='card__content'>" +
       elemento +
       "</div>";
 
 
-    mesa1.appendChild(tarjeta1);
+    table1.appendChild(card);
 
-    tarjeta1.innerHTML =
-      "<div class='tarjeta'>" +
-      "<div class='tarjeta__contenido'>" +
+    card1.innerHTML =
+      "<div class='card1'>" +
+      "<div class='card1__content'>" +
       elemento +
       "</div>" +
       "</div>";
 
-    mesa.appendChild(tarjeta);
+    table.appendChild(card1);
 
 
   });
@@ -63,16 +63,24 @@ function reparteTarjetas() {
 
 }
 
-reparteTarjetas();
+distributeCards();
 
 function computerPlay() {
 
 
-  let randomItem = tarjeta[Math.floor(Math.random() * play.length)];
+  
+  let randomItem = cardGroup[Math.floor(Math.random() * cardGroup.length)];
 
-
+ 
   return randomItem;
+
+  //tarjeta.classList.add("clicking");
+
+ // console.log(this);
 }
+
+
+
 
 function selection() {
 
@@ -87,9 +95,11 @@ function removeTransition(e) {
 }
 
 
-document.querySelectorAll(".tarjeta1").forEach(function (elemento) {
-  elemento.addEventListener("click", selection);
-  elemento.addEventListener('transitionend', removeTransition);
+document.querySelectorAll(".card1").forEach(function (element) {
+  element.addEventListener("click", selection);
+  element.addEventListener('transitionend', removeTransition);
+element.addEventListener("click", computerPlay);
+
 
 });
 
