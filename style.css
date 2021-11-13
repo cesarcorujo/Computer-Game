@@ -3,7 +3,7 @@
 body {
   text-align: center;
   font-family: Dosis, sans-serif;
-  font-size: large;
+  font-size: medium;
   color: rgb(247, 250, 244);
   background-color: rgb(59, 53, 53);
 }
@@ -68,8 +68,8 @@ h1 {
 }
 
 .button {
-  position: fixed;
-  bottom: 60px;
+  position: absolute;
+  bottom: 0;
   left: 47vw;
   width: 6vw;
 }
@@ -110,21 +110,21 @@ main {
   align-content: center;
   max-width: 50rem;
   margin: auto;
-  margin-left: 57%;
+  margin-left: 67%;
   margin-top: 4%;
   position: absolute;
 }
 
 .table2 {
   margin: auto;
-  margin-left: 23%;
+  margin-left: 20%;
   margin-top: 0, 5%;
   position: absolute;
 }
 
 .table3 {
   margin: auto;
-  margin-left: 63%;
+  margin-left: 62%;
   margin-top: 0, 5%;
   position: absolute;
 }
@@ -134,6 +134,7 @@ main {
   height: 6rem;
   margin: 0.5rem;
   border-radius: 0.3em;
+  background-color: white;
   background-image: var(--gradient);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25), 4px 4px 10px rgba(0, 0, 0, 0.2);
   position: relative;
@@ -141,6 +142,8 @@ main {
   cursor: pointer;
   backface-visibility: hidden;
   transform-style: preserve-3d;
+  font-size: 2.5rem;
+  padding-top: 0.4rem;
   transition: all 0.3s ease;
 }
 
@@ -155,7 +158,7 @@ main {
   position: relative;
   transition: 0.3s;
   cursor: pointer;
-  backface-visibility: visible;
+  backface-visibility: hidden;
   transform-style: preserve-3d;
   font-size: 2.5rem;
   padding-top: 0.4rem;

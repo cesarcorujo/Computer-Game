@@ -24,34 +24,26 @@ function distributeCards() {
 
   var sortedCards = sortCards();
 
-  table2.innerHTML = '<span>Human Play</span>';
-  table3.innerHTML = '<span>Computer Play</span>';
+  table2.innerHTML = '<span>Your Selection</span>';
+  table3.innerHTML = '<span>Computer Selection</span>';
 
   table.innerHTML = "";
-  table1.innerHTML = "";
+  //table1.innerHTML = "";
 
 
 
- sortedCards.forEach(function (elemento) {
+ sortedCards.forEach(function (element) {
 
 
-    var card = document.createElement("div");
+    
     var card1 = document.createElement("div");
 
-
-    card.innerHTML =
-      "<div  class='card'>" +
-      "<div class='card__content'>" +
-      elemento +
-      "</div>";
-
-
-    table1.appendChild(card);
+    
 
     card1.innerHTML =
       "<div class='card1'>" +
       "<div class='card1__content'>" +
-      elemento +
+      element +
       "</div>" +
       "</div>";
 
@@ -74,9 +66,7 @@ function computerPlay() {
  
   return randomItem;
 
-  //tarjeta.classList.add("clicking");
-
- // console.log(this);
+  
 }
 
 
@@ -86,6 +76,7 @@ function selection() {
 
   this.classList.add("clicking");
 
+  
 }
 
 
@@ -95,10 +86,58 @@ function removeTransition(e) {
 }
 
 
+
+
+function addCard() {
+
+     
+    var table1 = document.querySelector("#table1");
+    
+       
+    table1.innerHTML = "";
+  
+  
+  
+    
+      var randomCard = computerPlay();
+     
+      var card = document.createElement("div");
+      
+  
+  
+      card.innerHTML =
+        "<div  class='card'>" +
+       "<div class='card__content'>" +
+        randomCard +
+        "</div>";
+  
+  
+      table1.appendChild(card);
+  
+     
+      //card.classList.add("clicking");
+
+
+  
+    };
+  
+  
+  
+  
+ 
+  
+
+   
+
+    
+
+
+
+
 document.querySelectorAll(".card1").forEach(function (element) {
   element.addEventListener("click", selection);
   element.addEventListener('transitionend', removeTransition);
-element.addEventListener("click", computerPlay);
+element.addEventListener("click", addCard);
 
 
 });
