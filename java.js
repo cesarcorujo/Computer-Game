@@ -66,6 +66,8 @@ function computerPlay() {
  
   return randomItem;
 
+ 
+
   
 }
 
@@ -73,6 +75,13 @@ function computerPlay() {
 
 
 function selection() {
+
+  var clicking = document.querySelectorAll(".clicking");
+  
+  if (clicking.length > 1) {
+
+    return;
+  }
 
   this.classList.add("clicking");
 
@@ -92,7 +101,8 @@ function addCard() {
 
      
     var table1 = document.querySelector("#table1");
-    
+
+  
        
     table1.innerHTML = "";
   
@@ -103,10 +113,11 @@ function addCard() {
      
       var card = document.createElement("div");
       
+     
   
   
       card.innerHTML =
-        "<div  class='card'>" +
+        "<div  class='card' >" +
        "<div class='card__content'>" +
         randomCard +
         "</div>";
@@ -117,28 +128,128 @@ function addCard() {
      
       //card.classList.add("clicking");
 
+      
 
   
     };
   
-  
-  
-  
  
-  
-
-   
 
     
+ 
+
+    function game() {
+      
+    
+     let selected ;
+
+    let computer = document.querySelector("#table1").textContent;
+
+    
+           
+ 
+    // let player = descubiertas.textContent;
+
+    selected = document.querySelectorAll(".clicking");
 
 
 
+   
+    
+
+            
+     if ((computer === "✂️" && selected[0].textContent === "✂️") || 
+     (computer === "📃" && selected[0].textContent === "📃") || 
+     (computer ===  "🪨" && selected[0].textContent === "🪨"))  
+     
+      {
+        
+        document.getElementById("alert1").innerHTML = "Tie !";
+        document.getElementById("gamerTotal").innerHTML = " Gamer =  0" ;
+        document.getElementById("computerTotal").innerHTML = " Computer  =  0" ;
+       
+   
+   } else if (computer === "🪨" && selected.textContent === "📃") 
+   
+   {
+     
+    
+     document.getElementById("alert2").innerHTML = "Paper beats rock !";
+     document.getElementById("gamerTotal").innerHTML = " Gamer =  1" ;
+     document.getElementById("computerTotal").innerHTML = " Computer  =  0" ;
+     
+   
+   } else if (computer === "📃" && selected[0].textContent === "🪨") {
+   
+     
+     
+     document.getElementById("alert2").innerHTML = "Paper beats rock !";
+     document.getElementById("gamerTotal").innerHTML = " Computer =  1" ;
+     document.getElementById("computerTotal").innerHTML = " Gamer  =  0" ;
+   
+   }
+   
+   else if (computer === "✂️" && selected[0].textContent === "🪨" )
+   
+   
+   {
+   
+    
+   
+     document.getElementById("alert3").innerHTML = "Rock beat Sissors !";
+     document.getElementById("gamerTotal").innerHTML = " Gamer =  1" ;
+     document.getElementById("computerTotal").innerHTML = " Computer  =  0" ;
+  
+   
+   }  else if (computer === "🪨" && selected[0].textContent === "✂️") {
+   
+   
+  
+     document.getElementById("alert3").innerHTML = "Rock beat Sissors !";
+     document.getElementById("gamerTotal").innerHTML = " Gamer =  0" ;
+     document.getElementById("computerTotal").innerHTML = " Computer  =  1" ;
+   
+   }
+   
+   else if (computer === "📃" && selected[0].textContent === "✂️") 
+   
+   {
+     
+   
+  
+     document.getElementById("alert4").innerHTML = "Sissors beats Paper !";
+     document.getElementById("gamerTotal").innerHTML = " Gamer =  1" ;
+     document.getElementById("computerTotal").innerHTML = " Computer  =  0" ;
+    
+   
+   } else if (computer === "✂️" && selected[0].textContent === "📃") {
+   
+     
+     document.getElementById("alert4").innerHTML = "Sissors beats Paper !";
+     document.getElementById("gamerTotal").innerHTML = " Gamer =  0" ;
+     document.getElementById("computerTotal").innerHTML = " Computer  =  1" ;
+     
+   
+   } else {
+   
+     
+     alert("Wrong Option");
+   
+   }
+        
+   }    
+   
+  
+  
 
 document.querySelectorAll(".card1").forEach(function (element) {
   element.addEventListener("click", selection);
   element.addEventListener('transitionend', removeTransition);
-element.addEventListener("click", addCard);
+  element.addEventListener("click", addCard);
+  
+element.addEventListener("click", game);
 
 
 });
+
 

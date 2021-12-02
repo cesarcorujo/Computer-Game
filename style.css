@@ -21,10 +21,10 @@ body {
 h1 {
   font-family: dosis;
 }
-#title {
+.title {
   padding-top: -5%;
 }
-#form {
+.form {
   font-family: dosis;
   padding-top: 2%;
 }
@@ -39,15 +39,15 @@ h1 {
   color: rgb(247, 250, 244);
 }
 
-#message {
+.message {
   font-family: dosis;
   color: rgb(247, 250, 244);
 }
 
-#alert1,
-#alert2,
-#alert3,
-#alert4 {
+.alert1,
+.alert2,
+.alert3,
+.alert4 {
   font-family: Dosis;
   font-size: xx-large;
   color: rgb(247, 250, 244);
@@ -59,22 +59,22 @@ h1 {
   grid-gap: 20px;
 }
 
-#gamerTotal {
+.gamerTotal {
   font-family: dosis;
 }
 
-#computerTotal {
+.computerTotal {
   font-family: dosis;
 }
 
 .button {
   position: absolute;
-  bottom: 0;
+  bottom: 15px;
   left: 47vw;
   width: 6vw;
 }
 
-#result {
+.result {
   font-family: dosis;
 }
 
@@ -213,4 +213,8 @@ main {
 
 .card.uncovered {
   transform: rotateY(-180deg);
+}
+
+.alerts {
+  margin-top: 80px;
 }
