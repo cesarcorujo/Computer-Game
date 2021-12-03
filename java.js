@@ -97,6 +97,8 @@ function removeTransition(e) {
 
 
 
+
+
 function addCard() {
 
      
@@ -126,11 +128,18 @@ function addCard() {
       table1.appendChild(card);
   
      
-      //card.classList.add("clicking");
+     table1.classList.add("clicking");
 
+     function removeTransition1() {
       
+      table1.classList.remove('clicking');
+     
+      }
 
+      document.getElementById("table1").addEventListener("transitionend", removeTransition1); 
+         
   
+ 
     };
   
  
@@ -145,17 +154,9 @@ function addCard() {
 
     let computer = document.querySelector("#table1").textContent;
 
-    
-           
- 
-    // let player = descubiertas.textContent;
-
+       
     selected = document.querySelectorAll(".clicking");
 
-
-
-   
-    
 
             
      if ((computer === "✂️" && selected[0].textContent === "✂️") || 
@@ -164,17 +165,17 @@ function addCard() {
      
       {
         
-        document.getElementById("alert1").innerHTML = "Tie !";
+        document.getElementById("alert").innerHTML = "Tie !";
         document.getElementById("gamerTotal").innerHTML = " Gamer =  0" ;
         document.getElementById("computerTotal").innerHTML = " Computer  =  0" ;
        
    
-   } else if (computer === "🪨" && selected.textContent === "📃") 
+   } else if (computer === "🪨" && selected[0].textContent === "📃") 
    
    {
      
     
-     document.getElementById("alert2").innerHTML = "Paper beats rock !";
+     document.getElementById("alert").innerHTML = "Paper beats rock !";
      document.getElementById("gamerTotal").innerHTML = " Gamer =  1" ;
      document.getElementById("computerTotal").innerHTML = " Computer  =  0" ;
      
@@ -183,7 +184,7 @@ function addCard() {
    
      
      
-     document.getElementById("alert2").innerHTML = "Paper beats rock !";
+     document.getElementById("alert").innerHTML = "Paper beats rock !";
      document.getElementById("gamerTotal").innerHTML = " Computer =  1" ;
      document.getElementById("computerTotal").innerHTML = " Gamer  =  0" ;
    
@@ -196,7 +197,7 @@ function addCard() {
    
     
    
-     document.getElementById("alert3").innerHTML = "Rock beat Sissors !";
+     document.getElementById("alert").innerHTML = "Rock beat Scissors !";
      document.getElementById("gamerTotal").innerHTML = " Gamer =  1" ;
      document.getElementById("computerTotal").innerHTML = " Computer  =  0" ;
   
@@ -205,7 +206,7 @@ function addCard() {
    
    
   
-     document.getElementById("alert3").innerHTML = "Rock beat Sissors !";
+     document.getElementById("alert").innerHTML = "Rock beat Scissors !";
      document.getElementById("gamerTotal").innerHTML = " Gamer =  0" ;
      document.getElementById("computerTotal").innerHTML = " Computer  =  1" ;
    
@@ -217,7 +218,7 @@ function addCard() {
      
    
   
-     document.getElementById("alert4").innerHTML = "Sissors beats Paper !";
+     document.getElementById("alert").innerHTML = "Scissors beats Paper !";
      document.getElementById("gamerTotal").innerHTML = " Gamer =  1" ;
      document.getElementById("computerTotal").innerHTML = " Computer  =  0" ;
     
@@ -225,7 +226,7 @@ function addCard() {
    } else if (computer === "✂️" && selected[0].textContent === "📃") {
    
      
-     document.getElementById("alert4").innerHTML = "Sissors beats Paper !";
+     document.getElementById("alert").innerHTML = "Scissors beats Paper !";
      document.getElementById("gamerTotal").innerHTML = " Gamer =  0" ;
      document.getElementById("computerTotal").innerHTML = " Computer  =  1" ;
      
@@ -246,10 +247,8 @@ document.querySelectorAll(".card1").forEach(function (element) {
   element.addEventListener("click", selection);
   element.addEventListener('transitionend', removeTransition);
   element.addEventListener("click", addCard);
+  element.addEventListener("click", game);
   
-element.addEventListener("click", game);
-
-
 });
 
 
