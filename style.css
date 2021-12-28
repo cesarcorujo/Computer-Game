@@ -5,7 +5,7 @@ body {
   font-family: Dosis, sans-serif;
   font-size: small;
   color: rgb(247, 250, 244);
-  background-color: rgb(59, 53, 53);
+  background-color: cadetblue;
 }
 
 .flex {
@@ -18,12 +18,28 @@ body {
   padding-top: 20px;
 }
 
-h1 {
+.flex-upper {
+  display: flex;
+}
+
+.left-side {
+  flex: 1;
+  justify-content: center;
+}
+
+.right-side {
+  flex: 1;
+}
+
+h1,
+h2 {
   font-family: dosis;
 }
+
 .title {
-  padding-top: -5%;
-  margin-top: -40px;
+  padding-top: 0%;
+  margin-top: 0px;
+  flex: 1;
 }
 .form {
   font-family: dosis;
@@ -69,7 +85,7 @@ h1 {
   margin-bottom: 25px;
   border-width: 2px;
   border-style: solid;
-  border-color: blue;
+  border-color: whitesmoke;
 }
 
 .computerTotal {
@@ -83,14 +99,25 @@ h1 {
   margin-bottom: 25px;
   border-width: 2px;
   border-style: solid;
-  border-color: blue;
+  border-color: whitesmoke;
 }
 
 .button {
-  position: absolute;
-  bottom: 15px;
-  left: 47vw;
-  width: 6vw;
+  background-color: cadetblue;
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  margin: 4px 2px;
+  cursor: pointer;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 0.3em;
+  margin-top: 10%;
 }
 
 .result {
