@@ -1,4 +1,7 @@
 
+
+
+
 var cardGroup = ["✂️", "📃", "🪨"];
 
 
@@ -148,6 +151,19 @@ function addCard() {
  
 
     function game() {
+
+      
+        let pScore = 0;
+        let cScore = 0;
+      
+      
+     const updateScore = () => {
+        const playerScore = document.querySelector(".gamerTotal p");
+      const computerScore = document.querySelector(".computerTotal p");
+      playerScore.textContent = pScore;
+      computerScore.textContent = cScore;
+     };
+      
       
     
      let selected ;
@@ -166,9 +182,9 @@ function addCard() {
       {
         
         document.getElementById("alert").innerHTML = "Tie !";
-        document.getElementById("gamerTotal").innerHTML = " Gamer =  0" ;
-        document.getElementById("computerTotal").innerHTML = " Computer  =  0" ;
-       
+        
+        
+     return;
    
    } else if (computer === "🪨" && selected[0].textContent === "📃") 
    
@@ -176,18 +192,18 @@ function addCard() {
      
     
      document.getElementById("alert").innerHTML = "Paper beats rock !";
-     document.getElementById("gamerTotal").innerHTML = " Gamer =  1" ;
-     document.getElementById("computerTotal").innerHTML = " Computer  =  0" ;
-     
+    pScore++;
+    updateScore();
+    return;
    
    } else if (computer === "📃" && selected[0].textContent === "🪨") {
    
      
      
      document.getElementById("alert").innerHTML = "Paper beats rock !";
-     document.getElementById("gamerTotal").innerHTML = " Computer =  1" ;
-     document.getElementById("computerTotal").innerHTML = " Gamer  =  0" ;
-   
+    cScore++;
+    updateScore();
+   return;
    }
    
    else if (computer === "✂️" && selected[0].textContent === "🪨" )
@@ -198,37 +214,40 @@ function addCard() {
     
    
      document.getElementById("alert").innerHTML = "Rock beat Scissors !";
-     document.getElementById("gamerTotal").innerHTML = " Gamer =  1" ;
-     document.getElementById("computerTotal").innerHTML = " Computer  =  0" ;
-  
+     pScore++;
+   updateScore();
+    return;
    
    }  else if (computer === "🪨" && selected[0].textContent === "✂️") {
    
    
   
      document.getElementById("alert").innerHTML = "Rock beat Scissors !";
-     document.getElementById("gamerTotal").innerHTML = " Gamer =  0" ;
-     document.getElementById("computerTotal").innerHTML = " Computer  =  1" ;
-   
+  
+    cScore++;
+    updateScore();
+    return;
+
    }
    
    else if (computer === "📃" && selected[0].textContent === "✂️") 
    
    {
      
-   
-  
+     
      document.getElementById("alert").innerHTML = "Scissors beats Paper !";
-     document.getElementById("gamerTotal").innerHTML = " Gamer =  1" ;
-     document.getElementById("computerTotal").innerHTML = " Computer  =  0" ;
-    
+     pScore++;
+     updateScore();
+    return;
    
    } else if (computer === "✂️" && selected[0].textContent === "📃") {
    
      
      document.getElementById("alert").innerHTML = "Scissors beats Paper !";
-     document.getElementById("gamerTotal").innerHTML = " Gamer =  0" ;
-     document.getElementById("computerTotal").innerHTML = " Computer  =  1" ;
+    cScore++;
+     
+   updateScore();
+    return;
      
    
    } else {

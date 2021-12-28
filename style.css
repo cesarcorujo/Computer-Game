@@ -3,7 +3,7 @@
 body {
   text-align: center;
   font-family: Dosis, sans-serif;
-  font-size: medium;
+  font-size: small;
   color: rgb(247, 250, 244);
   background-color: rgb(59, 53, 53);
 }
@@ -23,10 +23,11 @@ h1 {
 }
 .title {
   padding-top: -5%;
+  margin-top: -40px;
 }
 .form {
   font-family: dosis;
-  padding-top: 2%;
+  padding-top: -5%;
 }
 
 .grid-containerMessages {
@@ -44,7 +45,7 @@ h1 {
   color: rgb(247, 250, 244);
 }
 
-.alert {
+#alert {
   font-family: Dosis;
   font-size: xx-large;
   color: rgb(247, 250, 244);
@@ -59,10 +60,30 @@ h1 {
 
 .gamerTotal {
   font-family: dosis;
+  margin-right: 270px;
+  margin-left: 270px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 15px;
+  margin-top: -30px;
+  margin-bottom: 25px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: blue;
 }
 
 .computerTotal {
   font-family: dosis;
+  margin-right: 270px;
+  margin-left: 270px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 15px;
+  margin-top: -30px;
+  margin-bottom: 25px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: blue;
 }
 
 .button {
@@ -215,5 +236,5 @@ main {
 }
 
 .alerts {
-  margin-top: 165px;
+  margin-top: 200px;
 }
