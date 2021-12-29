@@ -145,24 +145,26 @@ function addCard() {
  
     };
   
- 
-
+        
+  
     
  
 
     function game() {
 
       
+      
         let pScore = 0;
         let cScore = 0;
+
       
-      
-     const updateScore = () => {
-        const playerScore = document.querySelector(".gamerTotal p");
-      const computerScore = document.querySelector(".computerTotal p");
-      playerScore.textContent = pScore;
-      computerScore.textContent = cScore;
-     };
+       
+       const updateScore = () => {
+          const playerScore = document.querySelector(".gamerTotal p");
+        const computerScore = document.querySelector(".computerTotal p");
+         playerScore.textContent = pScore;
+         computerScore.textContent = cScore;
+       };
       
       
     
@@ -183,8 +185,8 @@ function addCard() {
         
         document.getElementById("alert").innerHTML = "Tie !";
         
-        
-     return;
+       
+    updateScore();
    
    } else if (computer === "🪨" && selected[0].textContent === "📃") 
    
@@ -192,7 +194,8 @@ function addCard() {
      
     
      document.getElementById("alert").innerHTML = "Paper beats rock !";
-    pScore++;
+     pScore++;
+  
     updateScore();
     return;
    
@@ -202,6 +205,7 @@ function addCard() {
      
      document.getElementById("alert").innerHTML = "Paper beats rock !";
     cScore++;
+   
     updateScore();
    return;
    }
@@ -215,7 +219,8 @@ function addCard() {
    
      document.getElementById("alert").innerHTML = "Rock beat Scissors !";
      pScore++;
-   updateScore();
+     
+    updateScore();
     return;
    
    }  else if (computer === "🪨" && selected[0].textContent === "✂️") {
@@ -225,6 +230,7 @@ function addCard() {
      document.getElementById("alert").innerHTML = "Rock beat Scissors !";
   
     cScore++;
+    
     updateScore();
     return;
 
@@ -237,7 +243,8 @@ function addCard() {
      
      document.getElementById("alert").innerHTML = "Scissors beats Paper !";
      pScore++;
-     updateScore();
+    updateScore();
+   
     return;
    
    } else if (computer === "✂️" && selected[0].textContent === "📃") {
@@ -245,18 +252,15 @@ function addCard() {
      
      document.getElementById("alert").innerHTML = "Scissors beats Paper !";
     cScore++;
-     
-   updateScore();
+    
+     updateScore();
+  
     return;
-     
-   
-   } else {
-   
-     
-     alert("Wrong Option");
+    
    
    }
-        
+   
+       
    }    
    
   
@@ -267,7 +271,7 @@ document.querySelectorAll(".card1").forEach(function (element) {
   element.addEventListener('transitionend', removeTransition);
   element.addEventListener("click", addCard);
   element.addEventListener("click", game);
-  
+ 
 });
 
 
